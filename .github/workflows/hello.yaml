@@ -7,8 +7,13 @@ jobs:
     env:
       COURSE: CloudComputing
     steps:
-      - name: Say Hello
       - uses: actions/checkout@v4
       - run: echo "Hello from ${COURSE}!"
       - run: echo "I'll list files."
+      - run: ls -al
+  goodbye:
+    needs: greet
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Goodbye from ${COURSE}!"
       - run: ls -al
