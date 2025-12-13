@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: Say Hello
       - uses: actions/checkout@v4
-      - run: echo "Hello from ${COURSE} !"
+      - run: echo "Hello from ${COURSE}!"
       - run: echo "I'll list files."
       - run: ls -al
